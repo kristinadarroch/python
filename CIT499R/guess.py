@@ -31,8 +31,11 @@ easygui.msgbox("""  Ahoy! I'm the Dread Pirate Robers, and I have a secret!It is
 while guess != secret and tries < 6:
     guess = easygui.integerbox(" What's yer guess, matey?")
     if not guess: break
-    if guess < secret:
-        easygui.msgbox(str(guess) + " is too low ye scurvy dog!")
+    if guess < (secret - 20):
+        easygui.msgbox(str(guess) + " is way too low ye scurvy dog!")
+    if guess >= (secret - 20) and guess <= (secret - 10):
+        easygui.msgbox(str(guess) + " it is too low doggie")
+    if ()
     elif guess > secret:
         easygui.msgbox(str(guess) + " it is too high, landlubber!")
     tries = tries + 1
