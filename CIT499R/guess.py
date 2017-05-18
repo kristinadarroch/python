@@ -35,7 +35,16 @@ while guess != secret and tries < 6:
         easygui.msgbox(str(guess) + " is way too low ye scurvy dog!")
     if guess >= (secret - 20) and guess <= (secret - 10):
         easygui.msgbox(str(guess) + " it is too low doggie")
-    if ()
+    if (secret - 10) < guess < (secret - 5):
+        easygui.msgbox(str(guess) + " hmmmmmmmm...something...but it's low...")
+    if guess >= (secret - 5) and guess < secret:
+        easygui.msgbox(str(guess) + " is close, but no. It be too low matey...")
+    if guess <= (secret + 5) and guess > secret:
+        easygui.msgbox(str(guess) + " is close, but too high, matey!")
+    if (secret + 5) < guess < (secret + 10):
+        easygui.msgbox(str(guess) + " hmmmmm...something...but it's high...")
+    if guess <= (secret + 20) and guess >= (secret + 10):
+        easygui.msgbox(str(guess) + " Arr! Too high, ye be!")
     elif guess > secret:
         easygui.msgbox(str(guess) + " it is too high, landlubber!")
     tries = tries + 1
