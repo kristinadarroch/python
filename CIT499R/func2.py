@@ -1,7 +1,8 @@
 #!/usr/bin/python
+
+# looking for a file named add
 from add import add
 
-boo = "Casper the friendly ghost."
 # Main operations.
 
 a = 2

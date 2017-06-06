@@ -8,7 +8,7 @@ def add(a, b):
   if (isinstance(a,int) or isinstance(a,float)) and (isinstance(b,int) or isinstance(b,float)):
     c = a + b
 
-    print boo + " " + e
+    # print boo + " " + e
 
   # Return a value from our function.
   return c
