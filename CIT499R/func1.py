@@ -7,9 +7,7 @@ def addInt(a, b):
   if isinstance(a,int) and isinstance(b,int):
     c = a + b
 
-
-
-    #return a value from our function
+#return a value from our function
     return c
 #main operations.
 
