@@ -1,7 +1,11 @@
 #!/usr/bin/python
 import pygame, sys, random
 
-skier_images = ["skier_down.png", "skier_right1.png", "skier_right2.png", "skier_left2.png", "skier_left1.png"]
+skier_images = { 'down':"skier_down.png"
+               , 'left1':"skier_left1.png"
+               , 'left2':"skier_left2.png"
+               , 'right1':"skier_right1.png"
+               , 'right2':"skier_right2.png" }
 
 class SkierClass(pygame.sprite.Sprite):
     def __init__(self):
@@ -16,7 +20,11 @@ class SkierClass(pygame.sprite.Sprite):
         if self.angle < -2: self.angle = -2
         if self.angle > 2: self.angle = 2
         center = self.rect.center
-        self.image = pygame.image.load(skier_images[self.angle])
+        if self.angle == -2: self.image = pygame.image.load(skier_image["left2"])
+        if self.angle == -1: self.image = pygame.image.load(skier_image["left1"])
+        if self.angle == 0: self.image = pygame.image.load(skier_image["down"])
+        if self.angle == 1: self.image = pygame.image.load(skier_image["right1"])
+        if self.angle == 2: self.image = pygame.image.load(skier_image["right2"])
         self.rect = self.image.get_rect()
         self.rect.center = center
         speed = [self.angle, 6 - abs(self.angle) * 2]
